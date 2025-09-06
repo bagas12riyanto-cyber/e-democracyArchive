@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-Democracy Archive: Platform Sejarah Politik Digital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* slate-50 */
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); /* blue-900 to blue-500 */
+        }
+        .feature-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -30px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #3b82f6; /* blue-500 */
+            border: 4px solid #ffffff;
+            z-index: 1;
+        }
+        .timeline-path {
+            position: absolute;
+            left: -21px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #e5e7eb; /* gray-200 */
+        }
+        /* Simple scroll animation */
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .scroll-animate.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header & Navigasi -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-blue-800">e-Democracy Archive</a>
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="#fitur" class="text-gray-600 hover:text-blue-600 transition">Fitur Utama</a>
+                <a href="#linimasa" class="text-gray-600 hover:text-blue-600 transition">Linimasa</a>
+                <a href="#simulasi" class="text-gray-600 hover:text-blue-600 transition">Simulasi</a>
+                <a href="#tujuan" class="text-gray-600 hover:text-blue-600 transition">Tujuan</a>
+                <a href="#dampak" class="text-gray-600 hover:text-blue-600 transition">Dampak</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4 space-y-2">
+            <a href="#fitur" class="block text-gray-600 hover:text-blue-600 transition">Fitur Utama</a>
+            <a href="#linimasa" class="block text-gray-600 hover:text-blue-600 transition">Linimasa</a>
+            <a href="#simulasi" class="block text-gray-600 hover:text-blue-600 transition">Simulasi</a>
+            <a href="#tujuan" class="block text-gray-600 hover:text-blue-600 transition">Tujuan</a>
+            <a href="#dampak" class="block text-gray-600 hover:text-blue-600 transition">Dampak</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-gradient text-white py-20 md:py-32">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">Membangun Demokrasi Inklusif 2045</h1>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto text-blue-100">Platform Digital Sejarah Politik untuk menjembatani generasi, meningkatkan literasi, dan memperkuat partisipasi kritis warga negara.</p>
+                <a href="#fitur" class="mt-8 inline-block bg-white text-blue-700 font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition transform hover:scale-105">Jelajahi Fitur</a>
+            </div>
+        </section>
+
+        <!-- Fitur Utama -->
+        <section id="fitur" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Platform Demokrasi Terintegrasi</h2>
+                    <p class="text-gray-600 mt-2 max-w-2xl mx-auto">Menggabungkan ilmu sejarah dan politik dengan teknologi AI dan Big Data untuk pengalaman belajar yang interaktif dan mendalam.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Fitur 1: Linimasa -->
+                    <div class="feature-card bg-gray-50 p-8 rounded-xl shadow-lg border border-gray-200">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 text-blue-600 mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Timeline Demokrasi</h3>
+                        <p class="text-gray-600">Sajikan perjalanan politik bangsa dari era kolonial hingga proyeksi 2045 dalam format multimedia yang menarik.</p>
+                    </div>
+                    <!-- Fitur 2: Simulasi Kebijakan -->
+                    <div class="feature-card bg-gray-50 p-8 rounded-xl shadow-lg border border-gray-200">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 text-blue-600 mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Simulasi Kebijakan Publik</h3>
+                        <p class="text-gray-600">Coba menjadi "pembuat kebijakan" dan lihat langsung proyeksi dampak keputusan Anda pada masyarakat.</p>
+                    </div>
+                    <!-- Fitur 3: Forum Diskusi -->
+                    <div class="feature-card bg-gray-50 p-8 rounded-xl shadow-lg border border-gray-200">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 text-blue-600 mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a2 2 0 01-2-2V4a2 2 0 012-2h8a2 2 0 012 2v4z" /></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Forum Diskusi Virtual</h3>
+                        <p class="text-gray-600">Ruang dialog inklusif lintas generasi dan kelompok sosial untuk memperkuat demokrasi partisipatif.</p>
+                    </div>
+                    <!-- Fitur 4: AI Historian & Politician -->
+                    <div class="feature-card bg-gray-50 p-8 rounded-xl shadow-lg border border-gray-200">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 text-blue-600 mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">AI Historian & Politician</h3>
+                        <p class="text-gray-600">Dapatkan jawaban atas pertanyaan Anda dengan perspektif historis dan analisis politik dari AI cerdas kami.</p>
+                    </div>
+                     <!-- Fitur 5: Pendidikan Kewarganegaraan -->
+                    <div class="feature-card bg-gray-50 p-8 rounded-xl shadow-lg border border-gray-200">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 text-blue-600 mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M12 14l9-5-9-5-9 5 9 5z" /><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222 4 2.222V20M12 12L4 7l8-4 8 4-8 5z" /></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Digital Civic Education</h3>
+                        <p class="text-gray-600">Kurikulum kewarganegaraan digital berbasis sejarah politik lokal untuk memahami esensi demokrasi.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Linimasa Demokrasi -->
+        <section id="linimasa" class="py-20">
+            <div class="container mx-auto px-6">
+                 <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Linimasa Demokrasi Indonesia</h2>
+                    <p class="text-gray-600 mt-2 max-w-2xl mx-auto">Menelusuri jejak langkah perjalanan politik bangsa dari masa ke masa.</p>
+                </div>
+                <div class="relative max-w-2xl mx-auto pl-8">
+                    <div class="timeline-path"></div>
+                    <div class="space-y-12">
+                        <div class="timeline-item relative scroll-animate">
+                            <h4 class="font-bold text-lg text-blue-700 mb-1">1908: Pergerakan Nasional</h4>
+                            <p class="text-gray-600">Lahirnya Budi Utomo menjadi penanda dimulainya era pergerakan nasional yang memperjuangkan kesadaran kebangsaan dan kemerdekaan.</p>
+                        </div>
+                        <div class="timeline-item relative scroll-animate">
+                            <h4 class="font-bold text-lg text-blue-700 mb-1">1945: Proklamasi Kemerdekaan</h4>
+                            <p class="text-gray-600">Puncak perjuangan bangsa dengan proklamasi kemerdekaan, menjadi fondasi berdirinya negara Republik Indonesia yang demokratis.</p>
+                        </div>
+                        <div class="timeline-item relative scroll-animate">
+                            <h4 class="font-bold text-lg text-blue-700 mb-1">1950-1959: Demokrasi Liberal</h4>
+                            <p class="text-gray-600">Era multipartai di mana kabinet silih berganti. Meski dinamis, era ini ditandai ketidakstabilan politik.</p>
+                        </div>
+                        <div class="timeline-item relative scroll-animate">
+                            <h4 class="font-bold text-lg text-blue-700 mb-1">1998: Era Reformasi</h4>
+                            <p class="text-gray-600">Gerakan mahasiswa dan rakyat menumbangkan Orde Baru, membuka gerbang demokrasi yang lebih terbuka, transparan, dan partisipatif.</p>
+                        </div>
+                         <div class="timeline-item relative scroll-animate">
+                            <h4 class="font-bold text-lg text-blue-700 mb-1">2024 - Sekarang: Demokrasi Digital</h4>
+                            <p class="text-gray-600">Tantangan dan peluang baru di era digital, di mana informasi dan disinformasi menyebar cepat, menuntut literasi politik yang lebih tinggi.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Simulasi Kebijakan -->
+        <section id="simulasi" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Simulasi Kebijakan Publik</h2>
+                    <p class="text-gray-600 mt-2 max-w-2xl mx-auto">Pilih sektor, atur alokasi anggaran, dan lihat proyeksi dampaknya.</p>
+                </div>
+                <div class="max-w-3xl mx-auto bg-gray-50 p-8 rounded-xl shadow-lg border border-gray-200">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <div class="mb-6">
+                                <label for="policy-sector" class="block font-medium mb-2">Sektor Kebijakan:</label>
+                                <select id="policy-sector" class="w-full p-3 rounded-md border border-gray-300 focus:ring-blue-500 focus:border-blue-500">
+                                    <option value="Pendidikan">Pendidikan</option>
+                                    <option value="Kesehatan">Kesehatan</option>
+                                    <option value="Infrastruktur">Infrastruktur</option>
+                                    <option value="Lingkungan Hidup">Lingkungan Hidup</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="budget-slider" class="block font-medium mb-2">Alokasi Anggaran: <span id="budget-value" class="font-bold text-blue-600">50%</span></label>
+                                <input type="range" id="budget-slider" min="0" max="100" value="50" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer">
+                            </div>
+                        </div>
+                        <div class="bg-blue-50 p-6 rounded-lg border border-blue-200">
+                            <h4 class="font-bold text-lg mb-3">Proyeksi Dampak:</h4>
+                            <p id="impact-text" class="text-gray-700">Dengan alokasi anggaran 50% untuk sektor Pendidikan, diproyeksikan akan terjadi peningkatan kualitas guru dan fasilitas sekolah secara signifikan dalam 5 tahun ke depan, namun sektor lain mungkin mengalami stagnasi.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tujuan & Dampak -->
+        <section id="tujuan" class="py-20">
+            <div class="container mx-auto px-6">
+                 <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Visi Menuju Indonesia Emas 2045</h2>
+                    <p class="text-gray-600 mt-2 max-w-2xl mx-auto">Mewujudkan demokrasi yang lebih matang, inklusif, dan berakar pada kesadaran sejarah.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <!-- Tujuan -->
+                    <div class="scroll-animate">
+                        <h3 class="text-2xl font-bold mb-4 flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 mr-3 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" /></svg>
+                            Tujuan Inovasi
+                        </h3>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700">
+                            <li>Meningkatkan literasi sejarah politik masyarakat.</li>
+                            <li>Membentuk partisipasi politik yang kritis dan inklusif.</li>
+                            <li>Menyediakan ruang interaksi digital lintas disiplin.</li>
+                            <li>Menjadi sarana transparansi, akuntabilitas, dan edukasi politik.</li>
+                        </ul>
+                    </div>
+                    <!-- Dampak -->
+                    <div id="dampak" class="scroll-animate">
+                        <h3 class="text-2xl font-bold mb-4 flex items-center">
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 mr-3 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
+                            Dampak yang Diharapkan
+                        </h3>
+                        <div class="space-y-4">
+                            <p><strong class="text-gray-900">Jangka Pendek (2025-2030):</strong> Meningkatnya pemahaman sejarah politik di kalangan generasi muda.</p>
+                            <p><strong class="text-gray-900">Jangka Menengah (2030-2040):</strong> Terbentuknya budaya politik yang kritis dan dialogis.</p>
+                            <p><strong class="text-gray-900">Jangka Panjang (2045):</strong> Demokrasi Indonesia menjadi lebih inklusif, berkeadilan, dan berbasis kesadaran historis.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-10">
+        <div class="container mx-auto px-6 text-center">
+            <p class="font-bold text-lg mb-2">e-Democracy Archive</p>
+            <p class="text-gray-400">&copy; 2024. Sebuah inisiatif untuk masa depan demokrasi Indonesia.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Simulasi Kebijakan
+        const budgetSlider = document.getElementById('budget-slider');
+        const budgetValue = document.getElementById('budget-value');
+        const policySector = document.getElementById('policy-sector');
+        const impactText = document.getElementById('impact-text');
+
+        const simulationOutputs = {
+            "Pendidikan": {
+                low: "kesejahteraan guru menurun dan banyak siswa putus sekolah.",
+                medium: "terjadi peningkatan kualitas guru dan fasilitas sekolah secara signifikan.",
+                high: "Indonesia menjadi pemimpin pendidikan di Asia Tenggara, namun sektor lain tertinggal."
+            },
+            "Kesehatan": {
+                low: "angka harapan hidup menurun dan wabah penyakit sulit terkendali.",
+                medium: "akses layanan kesehatan primer meningkat pesat di seluruh daerah.",
+                high: "fasilitas kesehatan setara negara maju, namun membebani APBN secara masif."
+            },
+            "Infrastruktur": {
+                low: "konektivitas antar daerah terhambat, menghambat pertumbuhan ekonomi.",
+                medium: "pembangunan jalan tol dan pelabuhan baru mempercepat laju logistik nasional.",
+                high: "tercipta mega-proyek infrastruktur modern, namun memicu masalah utang negara."
+            },
+            "Lingkungan Hidup": {
+                low: "terjadi bencana ekologis seperti banjir dan kekeringan yang meluas.",
+                medium: "program reboisasi dan energi terbarukan berhasil mengurangi emisi karbon.",
+                high: "Indonesia menjadi paru-paru dunia, namun pertumbuhan industri berat melambat."
+            }
+        };
+
+        function updateSimulation() {
+            const sector = policySector.value;
+            const budget = parseInt(budgetSlider.value);
+            budgetValue.textContent = `${budget}%`;
+            
+            let impactCategory;
+            if (budget < 33) {
+                impactCategory = 'low';
+            } else if (budget < 66) {
+                impactCategory = 'medium';
+            } else {
+                impactCategory = 'high';
+            }
+
+            const output = simulationOutputs[sector][impactCategory];
+            impactText.textContent = `Dengan alokasi anggaran ${budget}% untuk sektor ${sector}, diproyeksikan akan ${output}`;
+        }
+        
+        budgetSlider.addEventListener('input', updateSimulation);
+        policySector.addEventListener('change', updateSimulation);
+
+        // Scroll Animations
+        const scrollAnimateElements = document.querySelectorAll('.scroll-animate');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        scrollAnimateElements.forEach(element => {
+            observer.observe(element);
+        });
+
+    </script>
+</body>
+</html>
